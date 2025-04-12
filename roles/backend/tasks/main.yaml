@@ -50,16 +50,16 @@
       name: "{{ item }}"
       executable: pip3.9
     loop:
-      - PyMySQL
-      - cryptography
+    - PyMySQL
+    - cryptography
   
 
   - name: import mysql data
     community.mysql.mysql_db:
       name: backend
+      login_host: "{{ MYSQL_HOST }}"
       login_user: "{{ MYSQL_USER }}"
       login_password: "{{ MYSQL_PASSWORD }}"
-      login_host: "{{ MYSQL_HOST }}"
       target: /app/schema/backend.sql
       
     # notify: Restart backend
