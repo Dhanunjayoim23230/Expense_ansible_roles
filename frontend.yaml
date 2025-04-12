@@ -1,6 +1,0 @@
-- name: install frontend
-  hosts: frontend
-  become: yes
-  roles:
-    - frontend
-    
