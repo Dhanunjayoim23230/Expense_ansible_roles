@@ -1,4 +1,4 @@
-- name: install mysql
+- name: configuring  mysql server
   hosts: mysql
   connection: local
   become: yes
