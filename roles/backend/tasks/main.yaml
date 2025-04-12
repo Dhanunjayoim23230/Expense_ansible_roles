@@ -66,7 +66,7 @@
     # notify: Restart backend
 
   - name: Restart backend
-    ansible.builtin.systemd:
+    ansible.builtin.systemd_service:
       name: backend
       state: restarted
       daemon_reload: true
