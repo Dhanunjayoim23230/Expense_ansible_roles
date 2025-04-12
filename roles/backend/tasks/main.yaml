@@ -40,7 +40,7 @@
   
 
   - name: Copy backend service 
-    ansible.builtin.copy:
+    ansible.builtin.template:  #we have to use template module to copy backend.service.j2 file. it we dont user it will give error(if we profile file/**.yaml) it will copy with copy module.
       src: backend.service.j2
       dest: /etc/systemd/system/backend.service
       remote_src: yes
