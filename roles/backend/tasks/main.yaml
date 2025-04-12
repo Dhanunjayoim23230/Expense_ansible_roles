@@ -63,6 +63,7 @@
       login_password: "{{ MYSQL_PASSWORD }}"
       login_host: "{{ MYSQL_HOST }}"
       target: /app/schema/backend.sql
+      ignore_errors: true
     # notify: Restart backend
 
   - name: Restart backend
