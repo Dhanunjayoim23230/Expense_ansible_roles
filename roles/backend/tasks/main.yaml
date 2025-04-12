@@ -55,14 +55,14 @@
       - cryptography
   
 
-  - name: install mysql
+  - name: import mysql data
     community.mysql.mysql_db:
       state: import
       name: all
-      login_user: "{{ login_user }}""
-      login_password: "{{ login_password }}""
-      login_host: "{{ login_host }}""
-      target: "{{ target }}""
+      login_user: "{{ login_user }}"
+      login_password: "{{ login_password }}"
+      login_host: "{{ login_host }}"
+      target: "{{ target }}"
     notify: Restart backend
 
   
