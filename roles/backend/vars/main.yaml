@@ -1,4 +1,3 @@
 login_user: root
 login_password: ExpenseApp@1
 login_host: mysql.dawscloud.tech
-target: /app/schema/backend.sql
