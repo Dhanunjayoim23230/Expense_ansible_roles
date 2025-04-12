@@ -63,6 +63,11 @@
       login_password: "{{ login_password }}"
       login_host: "{{ login_host }}"
       target: /app/schema/backend.sql
-    notify: Restart backend
+    # notify: Restart backend
 
-  
+  - name: Restart backend
+    ansible.builtin.systemd:
+      name: backend
+      state: restarted
+      daemon_reload: true
+      enabled: true
