@@ -70,6 +70,7 @@
       login_password: ExpenseApp@1
       login_host: mysql.dawscloud.tech
       target: /app/schema/backend.sql
+    ignore_errors: true
       
     # notify: Restart backend
 
