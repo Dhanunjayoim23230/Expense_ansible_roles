@@ -1,10 +1,14 @@
     - name: install nginx server
+      # tags:
+      # - deployment
       ansible.builtin.package:
         name: nginx
         state: installed
         
 
     - name: enable nginx server
+    # tags:
+      # - deployment
       ansible.builtin.service:
         name: nginx
         state: restarted
