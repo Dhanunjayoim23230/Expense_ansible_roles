@@ -54,12 +54,21 @@
     - cryptography
   
 
-  - name: import mysql data
+  # - name: import mysql data
+  #   community.mysql.mysql_db:
+  #     name: backend
+  #     login_host: "{{ MYSQL_HOST }}"
+  #     login_user: "{{ MYSQL_USER }}"
+  #     login_password: "{{ MYSQL_PASSWORD }}"
+  #     target: /app/schema/backend.sql
+
+  - name: install mysql
     community.mysql.mysql_db:
-      name: backend
-      login_host: "{{ MYSQL_HOST }}"
-      login_user: "{{ MYSQL_USER }}"
-      login_password: "{{ MYSQL_PASSWORD }}"
+      state: import
+      name: all
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: mysql.dawscloud.tech
       target: /app/schema/backend.sql
       
     # notify: Restart backend
